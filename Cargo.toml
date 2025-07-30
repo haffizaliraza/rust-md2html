@@ -1,0 +1,18 @@
+[package]
+name = "rust-md2html"                 # CLI name on crates.io
+version = "0.1.0"                # Start with 0.1.0
+edition = "2021"
+authors = ["Hafiz Ali Raza haffizaliraza@gmail.com"]
+description = "A simple Rust CLI to convert Markdown to HTML with file watching"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/haffizaliraza/rust-md2html"
+readme = "README.md"
+keywords = ["markdown", "html", "cli", "rust"]
+categories = ["command-line-utilities", "text-processing"]
+homepage = "https://github.com/haffizaliraza/rust-md2html"
+exclude = [".gitignore", ".github/*"]
+
+[dependencies]
+pulldown-cmark = "0.10"
+clap = { version = "4", features = ["derive"] }
+notify = "6"

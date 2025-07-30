@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["Hafiz Ali Raza haffizaliraza@gmail.com"]
 description = "A simple Rust CLI to convert Markdown to HTML with file watching"
 license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/md2htmlx"
 repository = "https://github.com/haffizaliraza/rust-md2html"
 readme = "README.md"
 keywords = ["markdown", "html", "cli", "rust"]

@@ -1,3 +1,73 @@
+//! # md2htmlx
+//!
+//! `md2htmlx` is a lightweight and fast command-line tool written in Rust that converts Markdown (`.md`) files to HTML (`.html`) files.
+//! It includes a **live watch mode**, which automatically re-renders the output HTML file every time the Markdown source is modified.
+//!
+//! This tool is perfect for:
+//! - Developers writing documentation
+//! - Bloggers writing Markdown-based content
+//! - Static site generators
+//!
+//! ## 🔧 Features
+//!
+//! - ✅ Converts Markdown to HTML using `pulldown-cmark`
+//! - 👀 Automatically watches the input file for changes using `notify`
+//! - 🧩 Simple CLI interface powered by `clap`
+//!
+//! ## 🚀 Usage
+//!
+//! ```sh
+//! md2htmlx input.md output.html
+//! ```
+//!
+//! This will convert `input.md` to `output.html` and keep watching the file for changes.
+//!
+//! ### Arguments
+//!
+//! - `<INPUT>`: Path to the source Markdown file (e.g. `README.md`)
+//! - `<OUTPUT>`: Path where the generated HTML will be saved
+//!
+//! ## 💡 Example
+//!
+//! Given a file `README.md`:
+//!
+//! ```md
+//! # Hello World
+//!
+//! This is a *Markdown* example.
+//! ```
+//!
+//! Run the tool:
+//!
+//! ```sh
+//! md2htmlx README.md output.html
+//! ```
+//!
+//! Output (`output.html`):
+//!
+//! ```html
+//! <h1>Hello World</h1>
+//! <p>This is a <em>Markdown</em> example.</p>
+//! ```
+//!
+//! ## 📦 Dependencies
+//!
+//! - [`pulldown-cmark`](https://crates.io/crates/pulldown-cmark) for Markdown parsing
+//! - [`clap`](https://crates.io/crates/clap) for command-line interface
+//! - [`notify`](https://crates.io/crates/notify) for watching file changes
+//!
+//! ## 📄 License
+//!
+//! Licensed under either of:
+//!
+//! - MIT License ([LICENSE-MIT](https://opensource.org/licenses/MIT))
+//! - Apache License, Version 2.0 ([LICENSE-APACHE](https://www.apache.org/licenses/LICENSE-2.0.html))
+//!
+//! ## 👤 Author
+//!
+//! Created by Hafiz Ali Raza (https://github.com/haffizaliraza)
+
+
 use std::fs;
 use std::path::PathBuf;
 use std::sync::mpsc::channel;
